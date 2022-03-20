@@ -1,0 +1,29 @@
+{
+  "name": "coingecko-cli",
+  "version": "1.0.0",
+  "description": "a tool for receiving coingecko data right in your command line",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codingholt/CoinGecko-CLI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codingholt/CoinGecko-CLI/issues"
+  },
+  "homepage": "https://github.com/codingholt/CoinGecko-CLI#readme",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "cli-table3": "^0.6.1",
+    "coingecko-api-v3": "^0.0.13",
+    "commander": "^9.1.0"
+  },
+  "bin": {
+    "cg": "src/index.js"
+  }
+}
