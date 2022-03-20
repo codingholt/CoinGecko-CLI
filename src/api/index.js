@@ -5,6 +5,6 @@ const client = new CoinGeckoClient({
   autoRetry: true,
 });
 
-const coinList = await client.coinList();
+
 
 console.log(coinList)
