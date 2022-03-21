@@ -33,8 +33,31 @@ program
         }
         console.log(table.toString());
     })
-
-
+program
+.description('get coin data, use id as listed on coingecko (most likely the full name)')
+.argument('coin', 'id of the coin as mentioned on coingecko')
+.action(async(coin, options)=>{
+    const coinDATA = await client.coinId(
+        {
+            id: coin,
+        }
+    )
+    const table= new Table({
+        head: ['Base', 'Target', 'Last Price', 'Volume', 'Bid&Ask spread', 'Trade link'],
+        colWidths: [25,25,25,25,25, 50]
+    })
+    for(let i = 0; i < coinDATA['tickers'].length; i++){
+        table.push(
+            [coinDATA['tickers'][i]['base'], coinDATA['tickers'][i]['target'], coinDATA['tickers'][i]['last'], coinDATA['tickers'][i]['volume'], coinDATA['tickers'][i]['bid_ask_spread_percentage'], coinDATA['tickers'][i]['trade_url']]
+            );
+    }
+    console.log(table.toString());
+  
+})
+/*
+TODO
+-make tickers a --flag not a default option.
+*/
 program
     .command('price')
     .description('Get the price of a coin, use id as listed on coingecko (most likely the full name)')
