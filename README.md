@@ -18,7 +18,7 @@ a tool for receiving coingecko data right in your command line
 
 - [ ] coingecko trending coins
 
-- [ ] implement charts.
+- [ ] implement charts. with help of [this repo](https://github.com/portnov/chart-cli#readme).
 
 - [ ] make it so that people can use btc as a search option
 
