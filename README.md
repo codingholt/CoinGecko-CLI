@@ -23,3 +23,5 @@ a tool for receiving coingecko data right in your command line
 - [ ] make it so that people can use btc as a search option
 
 - [ ] top 100, top 25 by marketcap
+
+- [ ] config file for preferences like which fiat currency.

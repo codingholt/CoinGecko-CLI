@@ -6,5 +6,4 @@ const client = new CoinGeckoClient({
 });
 
 
-
-console.log(coinList)
+export {client}

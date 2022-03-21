@@ -1,15 +1,13 @@
 #! /usr/bin/env node
-const { CoinGeckoClient } = require('coingecko-api-v3')
-const { Command } = require('commander');
-var Table = require('cli-table3');
+import { Command } from 'commander';
+import { coinList } from './coinList.js';
+import { simplePrice } from './simplePrice.js';
+import { tickers } from './tickers.js';
+import { coinDATA } from './coinData.js';
+
+
 const program = new Command();
 
-
-
-const client = new CoinGeckoClient({
-    timeout: 10000,
-    autoRetry: true,
-  });
 
 program
     .name('CoinGecko CLI')
@@ -17,61 +15,35 @@ program
     .version('0.0.1');
 
 program
-    .command('list')
-    .description('Be carefull this returns a list with the name of each coin on coingecko')
-    .action(async ()=>{
-        const coinList = await client.coinList();
-        
-        const table = new Table({
-            head: ['id', 'symbol', 'name']
-          , colWidths: [25, 25, 100]
-        });
-        for(let i = 0; i < coinList.length; i++){
-            table.push(
-                [coinList[i]['id'], coinList[i]['symbol'], coinList[i]['name']]
-                );
-        }
-        console.log(table.toString());
-    })
-program
 .description('get coin data, use id as listed on coingecko (most likely the full name)')
 .argument('coin', 'id of the coin as mentioned on coingecko')
 .option('-t, --tickers', 'get the tickers of a coin and some extra data')
+.option('-c, --coindata')
 .action(async(coin, options)=>{
-    const coinDATA = await client.coinId(
-        {
-            id: coin,
-        }
-    )
+
+options.tickers ? tickers(coin) : null;
+options.coindata ? coinDATA(coin) : null;
 
 })
-/*
-TODO
--make tickers a --flag not a default option.
-*/
+
+
 program
     .command('price')
     .description('Get the price of a coin, use id as listed on coingecko (most likely the full name)')
     .argument('coin', 'id of the coin as mentioned on coingecko')
-    .action(async(coin)=>{
-        const coinPrice = await client.simplePrice({
-            vs_currencies: 'usd',
-            ids: coin,
-        });
-
-        const table = new Table({
-            head: ['', 'usd']
-          , colWidths: [25, 10]
-        });
-
-        table.push(
-        [coin, coinPrice[coin]['usd']]
-        );
-        console.log(table.toString());
-
-
+    .action((coin)=>{
+        simplePrice(coin)
     })
 
 
 
-  program.parse()
+
+
+
+program
+    .command('list')
+    .description('Be carefull this returns a list with the name of each coin on coingecko')
+    .action(coinList())
+
+
+program.parse()

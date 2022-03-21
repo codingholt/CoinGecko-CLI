@@ -1,4 +1,10 @@
-/*
+import { CoinGeckoClient } from 'coingecko-api-v3';
+import Table from 'cli-table3';
+const client = new CoinGeckoClient({
+    timeout: 10000,
+    autoRetry: true,
+});
+
 async function coinList(){
     const coinList = await client.coinList();
     
@@ -15,4 +21,3 @@ async function coinList(){
 }
 
 export { coinList };
-*/
