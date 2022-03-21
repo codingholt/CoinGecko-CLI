@@ -6,7 +6,7 @@ a tool for receiving coingecko data right in your command line
 
 - [x] make tickers a --flag not a default option.
 
-- [ ]change that you dont have todeclare client in each file.
+- [ ] change that you dont have todeclare client in each file.
 
 - [ ] flag for fdv.
 
