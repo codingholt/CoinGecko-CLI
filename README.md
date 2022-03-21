@@ -4,24 +4,26 @@ a tool for receiving coingecko data right in your command line
 
 ## todo
 
-- [ ] make tickers a --flag not a default option.
+- [x] make tickers a --flag not a default option.
 
-- [ ] flag for fdv
+- [ ]change that you dont have todeclare client in each file.
 
-- [ ] flag for marketcap
+- [ ] flag for fdv.
 
-- [ ] flag for marketcap to fdv ratio
+- [ ] flag for marketcap.
 
-- [ ] flag for total supply
+- [ ] flag for marketcap to fdv ratio.
 
-- [ ] flag for circulating supply
+- [ ] flag for total supply.
 
-- [ ] coingecko trending coins
+- [ ] flag for circulating supply.
+
+- [ ] coingecko trending coins.
 
 - [ ] implement charts. with help of [this repo](https://github.com/portnov/chart-cli#readme).
 
-- [ ] make it so that people can use btc as a search option
+- [ ] make it so that people can use btc as a search option.
 
-- [ ] top 100, top 25 by marketcap
+- [ ] top 100, top 25 by marketcap.
 
 - [ ] config file for preferences like which fiat currency.
