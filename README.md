@@ -4,7 +4,7 @@ a tool for receiving coingecko data right in your command line
 
 ## todo
 
-- [ ] checkbox make tickers a --flag not a default option.
+- [ ] make tickers a --flag not a default option.
 
 - [ ] flag for fdv
 
