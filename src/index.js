@@ -1,10 +1,9 @@
 #! /usr/bin/env node
 import { Command } from 'commander';
-import { coinList } from './coinList.js';
 import { simplePrice } from './simplePrice.js';
-import { tickers } from './tickers.js';
-import { coinDATA } from './coinData.js';
-
+import { tickers } from './options/tickers.js';
+import { coinDATA } from './options/coinData.js';
+import { coinOverview } from './options/coinOverview.js'
 
 const program = new Command();
 
@@ -15,15 +14,15 @@ program
     .version('0.0.1');
 
 program
-.description('get coin data, use id as listed on coingecko (most likely the full name)')
-.argument('coin', 'id of the coin as mentioned on coingecko')
-.option('-t, --tickers', 'get the tickers of a coin and some extra data')
-.option('-c, --coindata')
-.action(async(coin, options)=>{
-
-options.tickers ? tickers(coin) : null;
-options.coindata ? coinDATA(coin) : null;
-
+    .description('get coin data, use id as listed on coingecko (most likely the full name)')
+    .argument('coin', 'id of the coin as mentioned on coingecko')
+    .option('-t, --tickers', 'get the tickers of a coin and some extra data')
+    .option('-c, --coindata')
+    .option('-o, --overview')
+    .action(async(coin, options)=>{
+        options.tickers ? tickers(coin) : null;
+        options.coindata ? coinDATA(coin) : null;
+        options.overview ? coinOverview(coin): null;
 })
 
 
