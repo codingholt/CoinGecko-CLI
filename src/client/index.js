@@ -6,4 +6,4 @@ const client = new CoinGeckoClient({
 });
 
 
-export {client}
+export { client }

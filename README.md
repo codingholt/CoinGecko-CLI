@@ -6,7 +6,7 @@ a tool for receiving coingecko data right in your command line
 
 - [x] make tickers a --flag not a default option.
 
-- [ ]change that you dont have todeclare client in each file.
+- [x]change that you dont have to declare client in each file.
 
 - [ ] flag for fdv.
 
@@ -19,6 +19,8 @@ a tool for receiving coingecko data right in your command line
 - [ ] flag for circulating supply.
 
 - [ ] coingecko trending coins.
+
+- [ ] add --description for a coin.
 
 - [ ] implement charts. with help of [this repo](https://github.com/portnov/chart-cli#readme).
 

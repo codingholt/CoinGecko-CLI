@@ -1,10 +1,5 @@
-import { CoinGeckoClient } from 'coingecko-api-v3';
 import Table from 'cli-table3';
-const client = new CoinGeckoClient({
-    timeout: 10000,
-    autoRetry: true,
-});
-
+import { client } from './client/index.js'
 
 async function coinDATA(coin){
     const coinDATA = await client.coinId(
@@ -12,7 +7,8 @@ async function coinDATA(coin){
             id: coin,
         }
     )
-    console.log(coinDATA)
+
+    console.info(coinDATA)
 
 }
 

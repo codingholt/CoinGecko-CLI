@@ -38,12 +38,12 @@ program
 
 
 
-
-
+/*
 program
     .command('list')
     .description('Be carefull this returns a list with the name of each coin on coingecko')
-    .action(coinList())
-
+    .action(
+    coinList())
+*/
 
 program.parse()
