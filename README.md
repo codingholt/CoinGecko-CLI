@@ -8,6 +8,8 @@ a tool for receiving coingecko data right in your command line
 
 - [x] change that you dont have to declare client in each file.
 
+- [ ] error catching
+
 - [ ] flag for fdv.
 
 - [ ] flag for marketcap.

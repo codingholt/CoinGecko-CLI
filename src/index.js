@@ -4,6 +4,7 @@ import { simplePrice } from './simplePrice.js';
 import { tickers } from './options/tickers.js';
 import { coinDATA } from './options/coinData.js';
 import { coinOverview } from './options/coinOverview.js'
+import { fdv } from './options/fdv.js';
 
 const program = new Command();
 
@@ -19,10 +20,12 @@ program
     .option('-t, --tickers', 'get the tickers of a coin and some extra data')
     .option('-c, --coindata')
     .option('-o, --overview')
+    .option('-fdv, --FullyDilutedValue')
     .action(async(coin, options)=>{
         options.tickers ? tickers(coin) : null;
         options.coindata ? coinDATA(coin) : null;
         options.overview ? coinOverview(coin): null;
+        options.FullyDilutedValue ? fdv(coin) : null;
 })
 
 

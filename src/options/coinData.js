@@ -8,7 +8,18 @@ async function coinDATA(coin){
         }
     )
 
-    console.info(coinDATA)
+    const table = new Table(
+        {
+            head: [, 'usd','eur', 'eth' ]
+          , colWidths: [10, 10]
+        }
+    )  
+    table.push(
+        {
+        coin : [coinDATA['market_data']['current_price']['usd'], coinDATA['market_data']['current_price']['eur']]
+        }
+    )
+    console.log(table.toString())
 
 }
 
