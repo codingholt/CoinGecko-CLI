@@ -2,11 +2,16 @@ import Table from 'cli-table3';
 import { client } from '../client/index.js'
 
 async function coinDATA(coin){
-    const coinDATA = await client.coinId(
+    const coingeckoREQ = await client.coinId(
         {
             id: coin,
         }
     )
+
+    if(coingeckoREQ.hasOwnProperty('error')) {
+        console.error(coingeckoREQ['error'])
+        return;
+    }
 
     const table = new Table(
         {
@@ -16,10 +21,10 @@ async function coinDATA(coin){
     )  
     table.push(
         {
-        coin : [coinDATA['market_data']['current_price']['usd'], coinDATA['market_data']['current_price']['eur']]
+        coin : [coingeckoREQ['market_data']['current_price']['usd'], coingeckoREQ['market_data']['current_price']['eur']]
         }
     )
-    console.log(table.toString())
+    return console.log(table.toString());
 
 }
 

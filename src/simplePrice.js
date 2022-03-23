@@ -4,10 +4,18 @@ import Table from 'cli-table3';
 
 
 async function simplePrice(coin){
-    const coinPrice = await client.simplePrice({
+
+    const coingeckoREQ = await client.simplePrice({
         vs_currencies: 'usd',
         ids: coin,
     });
+
+
+    if(coingeckoREQ.hasOwnProperty('error')) {
+        console.error(coingeckoREQ['error'])
+        return;
+    }
+
 
     const table = new Table({
         head: ['', 'usd']
@@ -15,11 +23,10 @@ async function simplePrice(coin){
     });
 
     table.push(
-    [coin, coinPrice[coin]['usd']]
+    [coin, coingeckoREQ[coin]['usd']]
     );
-    console.log(table.toString());
-
-
+    return console.log(table.toString());
+    
 }
 
 export {simplePrice}
