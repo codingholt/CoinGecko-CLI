@@ -12,9 +12,6 @@ async function fdv(coin){
         }
     )
 
-
-
-
     if(coingeckoREQ.hasOwnProperty('error')) {
         console.error(coingeckoREQ['error'])
         return;

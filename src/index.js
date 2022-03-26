@@ -2,9 +2,9 @@
 import { Command } from 'commander';
 import { simplePrice } from './simplePrice.js';
 import { tickers } from './options/tickers.js';
-import { coinDATA } from './options/coinData.js';
-import { coinOverview } from './options/coinOverview.js'
+import { coinOverview } from './options/coinOverview.js';
 import { fdv } from './options/fdv.js';
+import { marketcap } from './options/marketcap.js';
 
 const program = new Command();
 
@@ -18,14 +18,14 @@ program
     .description('get coin data, use id as listed on coingecko (most likely the full name)')
     .argument('coin', 'id of the coin as mentioned on coingecko')
     .option('-t, --tickers', 'get the tickers of a coin and some extra data')
-    .option('-c, --coindata')
     .option('-o, --overview')
     .option('-fdv, --FullyDilutedValue')
+    .option('-mc, --marketcap')
     .action(async(coin, options)=>{
         options.tickers ? tickers(coin) : null;
-        options.coindata ? coinDATA(coin) : null;
         options.overview ? coinOverview(coin): null;
         options.FullyDilutedValue ? fdv(coin) : null;
+        options.marketcap ? marketcap(coin) : null
 })
 
 
