@@ -8,19 +8,22 @@ a tool for receiving coingecko data right in your command line
 
 - [x] change that you dont have to declare client in each file.
 
-- [ ] error catching
+- [x] error catching
 
-- [ ] flag for fdv.
+- [x] flag for fdv.
 
-- [ ] flag for marketcap.
+- [x] flag for marketcap.
 
 - [ ] flag for marketcap to fdv ratio.
 
-- [ ] flag for total supply.
+- [x] flag for total supply.
 
-- [ ] flag for circulating supply.
+- [x] flag for circulating supply.
+     these two are now combined with --supply
 
 - [ ] coingecko trending coins.
+
+- [ ] sentiment
 
 - [ ] add --description for a coin.
 
