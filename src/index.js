@@ -5,6 +5,7 @@ import { tickers } from './options/tickers.js';
 import { coinOverview } from './options/coinOverview.js';
 import { fdv } from './options/fdv.js';
 import { marketcap } from './options/marketcap.js';
+import { supply } from './options/supply.js';
 
 const program = new Command();
 
@@ -21,11 +22,15 @@ program
     .option('-o, --overview')
     .option('-fdv, --FullyDilutedValue')
     .option('-mc, --marketcap')
+    .option('-s, --supply')
+    .option('-dev, --developerdata')
     .action(async(coin, options)=>{
         options.tickers ? tickers(coin) : null;
         options.overview ? coinOverview(coin): null;
         options.FullyDilutedValue ? fdv(coin) : null;
         options.marketcap ? marketcap(coin) : null
+        options.supply ? supply(coin) : null
+        options.developerdata ? dev(coin) : null
 })
 
 
