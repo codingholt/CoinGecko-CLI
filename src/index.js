@@ -6,6 +6,7 @@ import { coinOverview } from './options/coinOverview.js';
 import { fdv } from './options/fdv.js';
 import { marketcap } from './options/marketcap.js';
 import { supply } from './options/supply.js';
+import { dev } from './options/dev.js';
 
 const program = new Command();
 
