@@ -19,7 +19,6 @@ async function fdv(coin){
 
     const table = new Table({
         head: ['coin', 'Fully Diluted Value'],
-        colWidths: [20, 30]
     })
 
     table.push([coin, readableNumber(coingeckoREQ['market_data']['fully_diluted_valuation']['usd'])+' $'])

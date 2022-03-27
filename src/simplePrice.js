@@ -19,7 +19,6 @@ async function simplePrice(coin){
 
     const table = new Table({
         head: ['', 'usd']
-      , colWidths: [25, 10]
     });
 
     table.push(

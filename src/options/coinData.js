@@ -16,7 +16,6 @@ async function coinDATA(coin){
     const table = new Table(
         {
             head: [, 'usd','eur', 'eth' ]
-          , colWidths: [10, 10]
         }
     )  
     table.push(
