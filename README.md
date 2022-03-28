@@ -21,7 +21,7 @@ a tool for receiving coingecko data right in your command line
 - [x] flag for circulating supply.
      these two are now combined with --supply
 
-- [ ] coingecko trending coins.
+- [x] coingecko trending coins.
 
 - [ ] sentiment
 
