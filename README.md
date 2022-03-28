@@ -14,7 +14,7 @@ a tool for receiving coingecko data right in your command line
 
 - [x] flag for marketcap.
 
-- [ ] flag for marketcap to fdv ratio.
+- [x] flag for marketcap to fdv ratio.
 
 - [x] flag for total supply.
 

@@ -8,6 +8,7 @@ import { marketcap } from './options/marketcap.js';
 import { supply } from './options/supply.js';
 import { dev } from './options/dev.js';
 import { marketcaptofdv } from './options/marketcaptoFdv.js'
+import { trending } from './options/trending.js';
 
 const program = new Command();
 
@@ -35,6 +36,7 @@ program
         options.supply ? supply(coin) : null;
         options.developerdata ? dev(coin) : null;
         options.marketcaptofdv ? marketcaptofdv(coin) : null;
+        // options.trending ? trending() : null;
 })
 
 
@@ -44,6 +46,15 @@ program
     .argument('coin', 'id of the coin as mentioned on coingecko')
     .action((coin)=>{
         simplePrice(coin)
+    })
+
+
+program
+    .command('trending')
+    .description('get the trending coins on coingecko')
+    .action(()=>{
+        console.log('command trending')
+        trending()
     })
 
 
