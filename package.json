@@ -22,10 +22,10 @@
     "chalk": "^5.0.1",
     "cli-table3": "^0.6.1",
     "coingecko-api-v3": "^0.0.13",
-    "commander": "^9.1.0"
+    "commander": "^9.1.0",
+    "html-to-text": "^8.1.0"
   },
   "bin": {
     "cg": "src/index.js"
   }
-
 }

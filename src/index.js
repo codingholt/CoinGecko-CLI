@@ -10,6 +10,7 @@ import { dev } from './options/dev.js';
 import { marketcaptofdv } from './options/marketcaptoFdv.js'
 import { trending } from './options/trending.js';
 import { sentiment } from './options/sentiment.js'
+import { description } from './options/description.js'
 
 const program = new Command();
 
@@ -30,6 +31,7 @@ program
     .option('-s, --supply')
     .option('-dev, --developerdata')
     .option('-st, --sentiment')
+    .option('-ds, --description')
     .action(async(coin, options)=>{
         options.tickers ? tickers(coin) : null;
         options.overview ? coinOverview(coin): null;
@@ -39,6 +41,7 @@ program
         options.developerdata ? dev(coin) : null;
         options.marketcaptofdv ? marketcaptofdv(coin) : null;
         options.sentiment ? sentiment(coin) : null;
+        options.description ? description(coin) : null;
 })
 
 
