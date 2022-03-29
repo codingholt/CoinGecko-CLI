@@ -1,6 +1,7 @@
 import { client } from "../client/index.js";
 import { readableNumber } from "../util/readableNumbers.js";
 import  Table  from "cli-table3";
+import { checkErr } from "../util/responseError.js";
 
 async function fdv(coin){
     const coingeckoREQ = await client.coinId(
@@ -11,12 +12,7 @@ async function fdv(coin){
         developer_data: false,
         }
     )
-
-    if(coingeckoREQ.hasOwnProperty('error')) {
-        console.error(coingeckoREQ['error'])
-        return;
-    }
-
+    checkErr(coingeckoREQ)
     const table = new Table({
         head: ['coin', 'Fully Diluted Value'],
     })

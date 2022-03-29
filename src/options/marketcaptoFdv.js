@@ -1,6 +1,7 @@
 import { client } from "../client/index.js";
 import { readableNumber } from "../util/readableNumbers.js";
 import Table from "cli-table3";
+import { checkErr } from "../util/responseError.js";
 
 async function marketcaptofdv(coin){
     const coingeckoREQ = await client.coinId({
@@ -9,13 +10,7 @@ async function marketcaptofdv(coin){
         community_data: false,
         tickers: false,
     })
-
-    if(coingeckoREQ.hasOwnProperty('error')) {
-        console.error(coingeckoREQ['error'])
-        return;
-    }
-
-
+    checkErr(coingeckoREQ)
     const table = new Table({
         head: ['coin', 'MarketCap', 'FDV', 'MC/FDV']
     });

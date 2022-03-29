@@ -1,4 +1,5 @@
 import Table from 'cli-table3';
+import { checkErr } from "../util/responseError.js";
 import { client } from '../client/index.js'
 
 async function coinDATA(coin){
@@ -7,11 +8,7 @@ async function coinDATA(coin){
             id: coin,
         }
     )
-
-    if(coingeckoREQ.hasOwnProperty('error')) {
-        console.error(coingeckoREQ['error'])
-        return;
-    }
+    checkErr(coingeckoREQ)
 
     const table = new Table(
         {

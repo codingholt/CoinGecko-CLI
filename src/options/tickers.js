@@ -1,14 +1,19 @@
 import { client } from '../client/index.js';
+import { checkErr } from "../util/responseError.js";
 import Table from 'cli-table3';
 
 
 async function tickers(coin){
-    const coinDATA = await client.coinIdTickers(
+    const coingeckoREQ = await client.coinIdTickers(
         {
             id: coin,
+            include_exchange_logo: false,
+            order: "volume_desc"
         }
     )
-    console.log(coinDATA)
+    
+    checkErr(coingeckoREQ)
+
     const table= new Table({
         head: ['Base', 'Target', 'Last Price', 'Volume', 'Bid&Ask spread', 'Trade link'],
     })

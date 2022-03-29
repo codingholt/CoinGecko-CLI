@@ -1,4 +1,5 @@
 import {client} from '../client/index.js';
+import { checkErr } from '../util/responseError.js';
 
 async function coinOverview(coin){
     const coingeckoREQ = await client.coinId(
@@ -7,10 +8,7 @@ async function coinOverview(coin){
         'tickers': false,
         }
     )
-    if(coingeckoREQ.hasOwnProperty('error')) {
-        console.error(coingeckoREQ['error'])
-        return;
-    }
+    checkErr(coingeckoREQ)
 }
 
 export {coinOverview}

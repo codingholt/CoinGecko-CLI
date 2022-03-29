@@ -1,5 +1,6 @@
 import { client } from "../client/index.js";
 import Table from "cli-table3";
+import { checkErr } from "../util/responseError.js";
 
 async function dev(coin){
     const coingeckoREQ = await client.coinId({
@@ -12,10 +13,7 @@ async function dev(coin){
     })
 
 
-    if(coingeckoREQ.hasOwnProperty('error')) {
-        console.error(coingeckoREQ['error'])
-        return;
-    }
+    checkErr(coingeckoREQ)
 
     const table = new Table({
         head: ['coin', 'Forks', 'Stars', 'Closed Issues/Total Issues', 'Code Additions/Deletions last 4wks', 'Commits 4wks']

@@ -1,9 +1,10 @@
-import { client } from "../client/index.js";
+import { client } from "../client/index.js"; 
+import { checkErr } from "../util/responseError.js";
 import Table from "cli-table3";
 
 async function trending(){
     const coingeckoREQ = await client.trending();
-
+    checkErr(coingeckoREQ)
     const table = new Table({
         head: ['trending rank', 'coin'],
     })

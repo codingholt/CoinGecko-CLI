@@ -9,6 +9,7 @@ import { supply } from './options/supply.js';
 import { dev } from './options/dev.js';
 import { marketcaptofdv } from './options/marketcaptoFdv.js'
 import { trending } from './options/trending.js';
+import { sentiment } from './options/sentiment.js'
 
 const program = new Command();
 
@@ -36,7 +37,7 @@ program
         options.supply ? supply(coin) : null;
         options.developerdata ? dev(coin) : null;
         options.marketcaptofdv ? marketcaptofdv(coin) : null;
-        // options.trending ? trending() : null;
+        options.sentiment ? sentiment() : null;
 })
 
 
@@ -56,6 +57,7 @@ program
         console.log('command trending')
         trending()
     })
+
 
 
 
