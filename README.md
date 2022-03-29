@@ -34,3 +34,5 @@ a tool for receiving coingecko data right in your command line
 - [ ] top 100, top 25 by marketcap.
 
 - [ ] config file for preferences like which fiat currency.
+
+- [ ] make nice readme
