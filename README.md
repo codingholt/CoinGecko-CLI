@@ -23,7 +23,7 @@ a tool for receiving coingecko data right in your command line
 
 - [x] coingecko trending coins.
 
-- [ ] sentiment
+- [x] sentiment
 
 - [ ] add --description for a coin.
 
