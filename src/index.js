@@ -29,6 +29,7 @@ program
     .option('-mcfdv, --marketcaptofdv')
     .option('-s, --supply')
     .option('-dev, --developerdata')
+    .option('-st, --sentiment')
     .action(async(coin, options)=>{
         options.tickers ? tickers(coin) : null;
         options.overview ? coinOverview(coin): null;
@@ -37,7 +38,7 @@ program
         options.supply ? supply(coin) : null;
         options.developerdata ? dev(coin) : null;
         options.marketcaptofdv ? marketcaptofdv(coin) : null;
-        options.sentiment ? sentiment() : null;
+        options.sentiment ? sentiment(coin) : null;
 })
 
 
