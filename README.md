@@ -25,7 +25,7 @@ a tool for receiving coingecko data right in your command line
 
 - [x] sentiment
 
-- [ ] add --description for a coin.
+- [x] add --description for a coin.
 
 - [ ] implement charts. with help of [this repo](https://github.com/portnov/chart-cli#readme).
 
