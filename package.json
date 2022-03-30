@@ -25,6 +25,7 @@
     "coingecko-api-v3": "^0.0.13",
     "commander": "^9.1.0",
     "defiant.js": "^2.2.7",
+    "elasticlunr": "^0.9.5",
     "html-to-text": "^8.1.0",
     "lowdb": "^3.0.0",
     "pouchdb": "^7.2.2",
