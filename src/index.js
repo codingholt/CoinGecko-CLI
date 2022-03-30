@@ -9,8 +9,8 @@ import { supply } from './options/supply.js';
 import { dev } from './options/dev.js';
 import { marketcaptofdv } from './options/marketcaptoFdv.js'
 import { trending } from './options/trending.js';
-import { sentiment } from './options/sentiment.js'
-import { description } from './options/description.js'
+import { sentiment } from './options/sentiment.js';
+import { description } from './options/description.js';
 
 const program = new Command();
 
@@ -70,8 +70,8 @@ program
 program
     .command('list')
     .description('Be carefull this returns a list with the name of each coin on coingecko')
-    .action(
-    coinList())
+    .action(async()=>{
+    coinList()})
 */
 
 program.parse()

@@ -19,11 +19,16 @@
   },
   "homepage": "https://github.com/codingholt/CoinGecko-CLI#readme",
   "dependencies": {
+    "better-sqlite3": "^7.5.0",
     "chalk": "^5.0.1",
     "cli-table3": "^0.6.1",
     "coingecko-api-v3": "^0.0.13",
     "commander": "^9.1.0",
-    "html-to-text": "^8.1.0"
+    "defiant.js": "^2.2.7",
+    "html-to-text": "^8.1.0",
+    "lowdb": "^3.0.0",
+    "pouchdb": "^7.2.2",
+    "sqlite": "^4.0.25"
   },
   "bin": {
     "cg": "src/index.js"
