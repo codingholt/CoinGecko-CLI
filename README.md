@@ -16,10 +16,11 @@ a tool for receiving coingecko data right in your command line
 
 - [x] flag for marketcap to fdv ratio.
 
-- [x] flag for total supply.
+these two are now combined with --supply
 
-- [x] flag for circulating supply.
-     these two are now combined with --supply
+     - [x] flag for total supply.
+
+     - [x] flag for circulating supply. 
 
 - [x] coingecko trending coins.
 
@@ -27,9 +28,11 @@ a tool for receiving coingecko data right in your command line
 
 - [x] add --description for a coin.
 
-- [ ] implement charts. with help of [this repo](https://github.com/portnov/chart-cli#readme).
+- [x] devdata
 
-- [ ] make it so that people can use btc as a search option.
+- [ ] make it so that people can use btc as a search option. (I've made a coin.json file, but dont know yet how to use it to convert the given input to the id)
+
+- [ ] implement charts. with help of [this repo](https://github.com/portnov/chart-cli#readme).
 
 - [ ] top 100, top 25 by marketcap.
 
