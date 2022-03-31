@@ -32,6 +32,8 @@ these two are now combined with --supply
 
 - [x] make it so that people can use btc as a search option. (used fuse to search through object arr)
 
+- [ ] add score threshold in the search function
+
 - [ ] let people see the full coin name not coingecko api-id
 
 - [ ] implement charts. with help of [this repo](https://github.com/andrewjstone/cli-chart).\
