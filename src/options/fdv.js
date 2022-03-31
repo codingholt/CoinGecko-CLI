@@ -13,6 +13,7 @@ async function fdv(coin){
         }
     )
     checkErr(coingeckoREQ)
+
     const table = new Table({
         head: ['coin', 'Fully Diluted Value'],
     })

@@ -7,10 +7,14 @@ async function search(coin){
     // Search in `name` and in `symbol` array
     keys: ['name', 'symbol']
   }
-  
+
   const fuse = new Fuse(coins, options)
-  
+
   const result = fuse.search(coin)
-  
-  console.log(result)
+
+  coin = result[0]['item']['id']
+  return coin
 }
+
+export {search}
+
