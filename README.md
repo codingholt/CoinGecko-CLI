@@ -32,7 +32,7 @@ these two are now combined with --supply
 
 - [x] make it so that people can use btc as a search option. (used fuse to search through object arr)
 
-- [ ] add score threshold in the search function
+- [x] add score threshold in the search function
 
 - [ ] let people see the full coin name not coingecko api-id
 
