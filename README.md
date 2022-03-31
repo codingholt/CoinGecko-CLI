@@ -32,7 +32,7 @@ these two are now combined with --supply
 
 - [ ] make it so that people can use btc as a search option. (I've made a coin.json file, but dont know yet how to use it to convert the given input to the id)[Maybe this is usefull](http://elasticlunr.com/) [or this tutorial](https://www.youtube.com/watch?v=Z4o7i5Zjys8)
 
-- [ ] implement charts. with help of [this repo](https://github.com/portnov/chart-cli#readme).\
+- [ ] implement charts. with help of [this repo](https://github.com/andrewjstone/cli-chart).\
 
 - [ ] top 100, top 25 by marketcap.
 
