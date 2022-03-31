@@ -1,4 +1,4 @@
-[
+const coins = [
 	{
 		"id": "01coin",
 		"symbol": "zoc",
@@ -67265,3 +67265,6 @@
 		"name": "zzz.finance v2"
 	}
 ]
+
+
+export {coins}
