@@ -10,7 +10,7 @@ async function search(coin){
 
   const fuse = new Fuse(coins, options)
 
-  const result = fuse.search(coin)
+  const result = await fuse.search(coin)
 
   coin = result[0]['item']['id']
   return coin

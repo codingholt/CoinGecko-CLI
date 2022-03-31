@@ -12,6 +12,7 @@ async function fdv(coin){
         developer_data: false,
         }
     )
+
     checkErr(coingeckoREQ)
 
     const table = new Table({

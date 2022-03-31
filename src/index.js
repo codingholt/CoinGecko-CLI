@@ -1,5 +1,6 @@
 #! /usr/bin/env node
 import { Command } from 'commander';
+import { search } from './util/search.js';
 import { simplePrice } from './simplePrice.js';
 import { tickers } from './options/tickers.js';
 import { coinOverview } from './options/coinOverview.js';
@@ -33,15 +34,15 @@ program
     .option('-st, --sentiment')
     .option('-ds, --description')
     .action(async(coin, options)=>{
-        options.tickers ? tickers(coin) : null;
-        options.overview ? coinOverview(coin): null;
-        options.FullyDilutedValue ? fdv(coin) : null;
-        options.marketcap ? marketcap(coin) : null
-        options.supply ? supply(coin) : null;
-        options.developerdata ? dev(coin) : null;
-        options.marketcaptofdv ? marketcaptofdv(coin) : null;
-        options.sentiment ? sentiment(coin) : null;
-        options.description ? description(coin) : null;
+        options.tickers ? tickers(await search(coin)) : null;
+        options.overview ? coinOverview(await search(coin)): null;
+        options.FullyDilutedValue ? fdv(await search(coin)) : null;
+        options.marketcap ? marketcap(await search(coin)) : null
+        options.supply ? supply(await search(coin)) : null;
+        options.developerdata ? dev(await search(coin)) : null;
+        options.marketcaptofdv ? marketcaptofdv(await search(coin)) : null;
+        options.sentiment ? sentiment(await search(coin)) : null;
+        options.description ? description(await search(coin)) : null;
 })
 
 
