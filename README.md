@@ -30,7 +30,7 @@ these two are now combined with --supply
 
 - [x] devdata
 
-- [ ] make it so that people can use btc as a search option. (I've made a coin.json file, but dont know yet how to use it to convert the given input to the id)[Maybe this is usefull](http://elasticlunr.com/) [or this tutorial](https://www.youtube.com/watch?v=Z4o7i5Zjys8)
+- [x] make it so that people can use btc as a search option. (used fuse to search through object arr)
 
 - [ ] implement charts. with help of [this repo](https://github.com/andrewjstone/cli-chart).\
 
