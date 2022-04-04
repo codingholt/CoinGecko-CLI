@@ -2,7 +2,7 @@ import { search } from './search.js'
 
 function checkErr(response){
     if(response.hasOwnProperty('error')) {
-        console.error('COIN COULD NOT BE FOUND ON COINGECKO')
+        console.error(`Coingecko returns error: \n\n ${response['error']}`)
         process.exit();
 }}
 

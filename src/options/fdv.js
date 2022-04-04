@@ -19,7 +19,7 @@ async function fdv(coin){
         head: ['coin', 'Fully Diluted Value'],
     })
 
-    table.push([coin, readableNumber(coingeckoREQ['market_data']['fully_diluted_valuation']['usd'])+' $'])
+    table.push([coingeckoREQ['name'], readableNumber(coingeckoREQ['market_data']['fully_diluted_valuation']['usd'])+' $'])
 
    return console.log(table.toString());
 }

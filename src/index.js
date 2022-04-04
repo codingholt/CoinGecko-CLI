@@ -12,6 +12,7 @@ import { marketcaptofdv } from './options/marketcaptoFdv.js'
 import { trending } from './options/trending.js';
 import { sentiment } from './options/sentiment.js';
 import { description } from './options/description.js';
+import {makeChart} from './options/chart.js'
 
 const program = new Command();
 
@@ -33,6 +34,7 @@ program
     .option('-dev, --developerdata')
     .option('-st, --sentiment')
     .option('-ds, --description')
+    .option('-c, --chart')
     .action(async(coin, options)=>{
         options.tickers ? tickers(await search(coin)) : null;
         options.overview ? coinOverview(await search(coin)): null;
@@ -43,6 +45,7 @@ program
         options.marketcaptofdv ? marketcaptofdv(await search(coin)) : null;
         options.sentiment ? sentiment(await search(coin)) : null;
         options.description ? description(await search(coin)) : null;
+
 })
 
 
@@ -63,6 +66,14 @@ program
         trending()
     })
 
+program
+    .command('chart')
+    .description('get a chart')
+    .argument('coin', 'the coin you want to chart')
+    .argument('days','number of days you want to have in your chart, default max amount of data available')
+    .action(async(coin, days)=>{
+        makeChart(await search(coin), days)
+    })
 
 
 

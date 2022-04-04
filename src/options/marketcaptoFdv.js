@@ -15,7 +15,7 @@ async function marketcaptofdv(coin){
         head: ['coin', 'MarketCap', 'FDV', 'MC/FDV']
     });
 
-    table.push([coin,
+    table.push([coingeckoREQ['name'],
     readableNumber(coingeckoREQ['market_data']['market_cap']['usd']) + ' $',
     readableNumber(coingeckoREQ['market_data']['fully_diluted_valuation']['usd']) + ' $',
     coingeckoREQ['market_data']['market_cap']['usd']/coingeckoREQ['market_data']['fully_diluted_valuation']['usd']])

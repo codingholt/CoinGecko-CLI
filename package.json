@@ -26,6 +26,7 @@
     "commander": "^9.1.0",
     "elasticlunr": "^0.9.5",
     "fuse.js": "^6.5.3",
+    "gnu-plot": "^0.3.1",
     "html-to-text": "^8.1.0"
   },
   "bin": {

@@ -1,14 +1,21 @@
-import chart from "cli-chart";
-import { client } from "../client";
+import gnuplot from 'gnu-plot'
+import { client } from "../client/index.js";
 
 
-const config = {
-    // xlabel: ,
-    // ylabel: ,
-    // direction: ,
-    // width:,
-    // height: ,
-    // lmargin: ,
-    // step: ,
-};
-const chart = new Chart(config);
+
+
+async function makeChart(coin, days){
+    const coingeckoREQ = await client.coinIdMarketChart({
+    
+        id: coin,
+        vs_currency: 'usd',
+        days: days,
+    })
+
+    gnuplot().plot([{
+        data:[coingeckoREQ['prices'][0],coingeckoREQ['prices'][1]]
+    }])
+    
+}
+
+export {makeChart}
