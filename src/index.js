@@ -12,7 +12,7 @@ import { marketcaptofdv } from './options/marketcaptoFdv.js'
 import { trending } from './options/trending.js';
 import { sentiment } from './options/sentiment.js';
 import { description } from './options/description.js';
-import {makeChart} from './options/chart.js'
+import { makeChart } from './options/chart.js'
 
 const program = new Command();
 
@@ -36,15 +36,15 @@ program
     .option('-ds, --description')
     .option('-c, --chart')
     .action(async(coin, options)=>{
-        options.tickers ? tickers(await search(coin)) : null;
-        options.overview ? coinOverview(await search(coin)): null;
-        options.FullyDilutedValue ? fdv(await search(coin)) : null;
-        options.marketcap ? marketcap(await search(coin)) : null
-        options.supply ? supply(await search(coin)) : null;
-        options.developerdata ? dev(await search(coin)) : null;
-        options.marketcaptofdv ? marketcaptofdv(await search(coin)) : null;
-        options.sentiment ? sentiment(await search(coin)) : null;
-        options.description ? description(await search(coin)) : null;
+        options.tickers && tickers(await search(coin));
+        options.overview && coinOverview(await search(coin));
+        options.FullyDilutedValue && fdv(await search(coin));
+        options.marketcap && marketcap(await search(coin));
+        options.supply && supply(await search(coin));
+        options.developerdata && dev(await search(coin));
+        options.marketcaptofdv && marketcaptofdv(await search(coin));
+        options.sentiment && sentiment(await search(coin));
+        options.description && description(await search(coin));
 
 })
 
