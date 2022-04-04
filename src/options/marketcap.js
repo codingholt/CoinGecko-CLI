@@ -15,7 +15,7 @@ async function  marketcap(coin){
         head: ['coin', 'Market Cap', 'Market Cap Change 24h'],
     })
 
-    table.push([coin, readableNumber(coingeckoREQ['market_data']['market_cap']['usd']) + ' $', coingeckoREQ['market_data']['market_cap_change_percentage_24h_in_currency']['usd'] + ' %'])
+    table.push([coingeckoREQ['name'], readableNumber(coingeckoREQ['market_data']['market_cap']['usd']) + ' $', coingeckoREQ['market_data']['market_cap_change_percentage_24h_in_currency']['usd'] + ' %'])
     console.log(table.toString())
 }
 

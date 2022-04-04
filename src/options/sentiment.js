@@ -14,7 +14,7 @@ async function sentiment(coin){
     const table = new Table({
         head: ['coin', 'Bullish %', 'Bearish %']
     })
-    table.push([coin, coingeckoREQ['sentiment_votes_up_percentage'] + ' %', coingeckoREQ['sentiment_votes_down_percentage'] + ' %'])
+    table.push([coingeckoREQ['name'], coingeckoREQ['sentiment_votes_up_percentage'] + ' %', coingeckoREQ['sentiment_votes_down_percentage'] + ' %'])
     console.log(table.toString())
 }
 

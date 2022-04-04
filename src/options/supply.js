@@ -16,7 +16,7 @@ async function supply(coin){
          head: ['coin', 'Circulating Supply', 'Max Supply', 'Total Supply'],
      })
 
-     table.push([coin, coingeckoREQ['market_data']['circulating_supply'], coingeckoREQ['market_data']['max_supply'], coingeckoREQ['market_data']['total_supply']])
+     table.push([coingeckoREQ['name'], coingeckoREQ['market_data']['circulating_supply'], coingeckoREQ['market_data']['max_supply'], coingeckoREQ['market_data']['total_supply']])
     
      console.log(table.toString())
 }

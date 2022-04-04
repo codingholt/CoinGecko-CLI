@@ -13,7 +13,7 @@ async function description(coin){
      })
     checkErr(coingeckoREQ)
     const table = new Table({
-        head: [coin]
+        head: [coingeckoREQ['name']]
     })
     const descr =  convert(coingeckoREQ['description']['en'], {
           wordwrap: 130
