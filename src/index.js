@@ -13,6 +13,7 @@ import { trending } from './options/trending.js';
 import { sentiment } from './options/sentiment.js';
 import { description } from './options/description.js';
 import { makeChart } from './options/chart.js'
+import { topMC } from './options/topMC.js';
 
 const program = new Command();
 
@@ -78,12 +79,15 @@ program
 
 
 
-/*
-program
-    .command('list')
-    .description('Be carefull this returns a list with the name of each coin on coingecko')
-    .action(async()=>{
-    coinList()})
-*/
+ program
+    .command('top')
+    .description('get the top coins sorted by largest to smallest marketcap')
+    .argument('how many coins', 'Amount of coins you want to have in your list')
+    .action(async(coinCount)=>{
+        topMC(coinCount)
+    })
+
+
+
 
 program.parse()
