@@ -38,7 +38,9 @@ these two are now combined with --supply
 
 - [ ] implement charts. with help of [this repo](https://github.com/andrewjstone/cli-chart).\
 
-- [ ] top 100, top 25 by marketcap.
+- [x] top 100, top 25 by marketcap.
+
+- [ ] use chalk for colors
 
 - [ ] config file for preferences like which fiat currency.
 

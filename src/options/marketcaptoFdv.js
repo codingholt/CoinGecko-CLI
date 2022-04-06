@@ -12,7 +12,7 @@ async function marketcaptofdv(coin){
     })
     checkErr(coingeckoREQ)
     const table = new Table({
-        head: ['coin', 'MarketCap', 'FDV', 'MC/FDV']
+        head: ['Coin', 'MarketCap', 'FDV', 'MC/FDV']
     });
 
     table.push([coingeckoREQ['name'],

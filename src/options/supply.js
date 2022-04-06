@@ -13,7 +13,7 @@ async function supply(coin){
      checkErr(coingeckoREQ)
 
      const table = new Table({
-         head: ['coin', 'Circulating Supply', 'Max Supply', 'Total Supply'],
+         head: ['Coin', 'Circulating Supply', 'Max Supply', 'Total Supply'],
      })
 
      table.push([coingeckoREQ['name'], coingeckoREQ['market_data']['circulating_supply'], coingeckoREQ['market_data']['max_supply'], coingeckoREQ['market_data']['total_supply']])

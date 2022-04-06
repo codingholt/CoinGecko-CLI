@@ -1,7 +1,11 @@
 import { client } from "../client/index.js";
 import { readableNumber } from "../util/readableNumbers.js";
 import { checkErr } from "../util/responseError.js";
+import chalk from 'chalk';
 import Table  from "cli-table3";
+
+const head = chalk.white;
+
 
 async function topMC(coinCount){
 
@@ -22,13 +26,13 @@ async function topMC(coinCount){
         table.push([i + 1, 
             coingeckoREQ[i]['name'],
             readableNumber(coingeckoREQ[i]['market_cap'])+' $',
-            coingeckoREQ[i]['price_change_percentage_24h']+' %',
+            coingeckoREQ[i]['price_change_percentage_24h'] > 0 ? chalk.green(coingeckoREQ[i]['price_change_percentage_24h'] + ' %') : chalk.red(coingeckoREQ[i]['price_change_percentage_24h']+' %'),
             readableNumber(coingeckoREQ[i]['fully_diluted_valuation']) == 0 ? '∞' : readableNumber(coingeckoREQ[i]['fully_diluted_valuation']),
             readableNumber(coingeckoREQ[i]['market_cap']/coingeckoREQ[i]['fully_diluted_valuation']) == 0 ? '∞': readableNumber(coingeckoREQ[i]['market_cap']/coingeckoREQ[i]['fully_diluted_valuation']),
             readableNumber(coingeckoREQ[i]['max_supply']) == 0 ? '∞' :  readableNumber(coingeckoREQ[i]['max_supply'])
             ])
     }
-    console.log(table.toString())
+    console.log(head(table.toString()))
 
 
 }

@@ -1,5 +1,5 @@
-import gnuplot from 'gnu-plot'
-import { client } from "../client/index.js";
+// import gnuplot from 'gnu-plot'
+// import { client } from "../client/index.js";
 
 
 
