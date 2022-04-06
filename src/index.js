@@ -14,6 +14,7 @@ import { sentiment } from './options/sentiment.js';
 import { description } from './options/description.js';
 import { makeChart } from './options/chart.js'
 import { topMC } from './options/topMC.js';
+import { price } from './options/price'
 
 const program = new Command();
 
@@ -38,7 +39,7 @@ program
     .option('-ds, --description')
     .option('-c, --chart')
     .action(async(coin, options)=>{
-        options.price && price(await search(coin));
+        options.price && simplePrice(await search(coin));
         options.tickers && tickers(await search(coin));
         options.overview && coinOverview(await search(coin));
         options.FullyDilutedValue && fdv(await search(coin));
