@@ -36,7 +36,7 @@ these two are now combined with --supply
 
 - [x] let people see the full coin name not coingecko api-id
 
-- [ ] implement charts. with help of [this repo](https://github.com/andrewjstone/cli-chart).\
+- [ ] implement charts. with help of [this repo](https://github.com/kroitor/asciichart).\
 
 - [x] top 100, top 25 by marketcap.
 
