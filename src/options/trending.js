@@ -6,7 +6,7 @@ async function trending(){
     const coingeckoREQ = await client.trending();
     checkErr(coingeckoREQ)
     const table = new Table({
-        head: ['trending rank', 'coin'],
+        head: ['Trending rank', 'Coin'],
     })
     table.push(
         { '1': [coingeckoREQ['coins'][0]['item']['name']] },
