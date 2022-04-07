@@ -14,7 +14,6 @@ import { sentiment } from './options/sentiment.js';
 import { description } from './options/description.js';
 import { makeChart } from './options/chart.js'
 import { topMC } from './options/topMC.js';
-import { price } from './options/price'
 
 const program = new Command();
 
@@ -55,10 +54,10 @@ program
 
 program
     .command('price')
-    .description('Get the price of a coin, use id as listed on coingecko (most likely the full name)')
+    .description('Get the price of a coin')
     .argument('coin', 'id of the coin as mentioned on coingecko')
-    .action((coin)=>{
-        simplePrice(coin)
+    .action(async(coin)=>{
+        simplePrice( await search(coin))
     })
 
 
@@ -66,7 +65,6 @@ program
     .command('trending')
     .description('get the trending coins on coingecko')
     .action(()=>{
-        console.log('command trending')
         trending()
     })
 

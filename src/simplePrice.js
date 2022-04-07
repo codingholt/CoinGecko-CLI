@@ -13,7 +13,6 @@ async function simplePrice(coin){
         ids: coin,
     });
 
-    console.log(coingeckoREQ)
     checkErr(coingeckoREQ)
 
     const table = new Table({
