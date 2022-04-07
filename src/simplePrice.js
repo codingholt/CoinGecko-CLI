@@ -20,7 +20,7 @@ async function simplePrice(coin){
     });
 
     table.push(
-    [coin, coingeckoREQ[coin]['usd'], coingeckoREQ[coin]['usd'] > 0 ? chalk.green(coingeckoREQ[coin]['usd_24h_change'] +' %') : chalk.red(coingeckoREQ[coin]['usd_24h_change'] + ' %')]
+    [coin, coingeckoREQ[coin]['usd'],  coingeckoREQ[coin]['usd_24h_change'] > 0 ?  chalk.green(coingeckoREQ[coin]['usd_24h_change']+' %') : chalk.red(coingeckoREQ[coin]['usd_24h_change'] + ' %')]
     );
     return console.log(table.toString());
     
