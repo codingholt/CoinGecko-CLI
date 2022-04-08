@@ -20,7 +20,7 @@ async function makeChart(coin, days){
    const table = new Table({
        head: [coin]
    })
-   
+    priceArr.slice(200)
    console.log(`${coin} chart last ${days} days`)
    console.log((await acsiichart).plot(priceArr, { height: 40}))
  
