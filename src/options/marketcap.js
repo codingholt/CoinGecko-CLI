@@ -11,16 +11,15 @@ async function  marketcap(coin){
         community_data: false,
         tickers: false,
     })
-    console.log(coingeckoREQ)
     checkErr(coingeckoREQ)
     const table = new Table({
-        head: ['coin', 'Market Cap', 'Market Cap Change 24h'],
+        head: ['Coin', 'Rank', 'Market Cap', 'Market Cap Change 24h'],
     })
 
-    table.push([coingeckoREQ['name'], readableNumber(coingeckoREQ['market_data']['market_cap']['usd']) + ' $', 
+    table.push([coingeckoREQ['name'], coingeckoREQ['market_cap_rank'], readableNumber(coingeckoREQ['market_data']['market_cap']['usd']) + ' $', 
     coingeckoREQ['market_data']['market_cap_change_percentage_24h_in_currency']['usd'] > 0 ?
     chalk.green(coingeckoREQ['market_data']['market_cap_change_percentage_24h_in_currency']['usd'] + ' %') 
-    : chalk.red(coingeckoREQ['market_data']['market_cap_change_percentage_24h_in_currency']['usd'] + ' %')
+    : chalk.red(coingeckoREQ['market_data']['market_cap_change_percentage_24h_in_currency']['usd'] + ' %'),
 ])
     console.log(table.toString())
 }
