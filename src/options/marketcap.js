@@ -11,6 +11,7 @@ async function  marketcap(coin){
         community_data: false,
         tickers: false,
     })
+    console.log(coingeckoREQ)
     checkErr(coingeckoREQ)
     const table = new Table({
         head: ['coin', 'Market Cap', 'Market Cap Change 24h'],
