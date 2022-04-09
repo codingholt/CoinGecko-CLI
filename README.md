@@ -44,7 +44,7 @@ these two are now combined with --supply
 
 - [ ] use chalk for colors
 
-- [ ] add mc rank at -mc
+- [x] add mc rank at -mc
 
 - [ ] config file for preferences like which fiat currency.
 
