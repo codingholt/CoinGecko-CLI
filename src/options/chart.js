@@ -1,5 +1,4 @@
 import acsiichart from 'asciichart'
-import Table  from 'cli-table3';
 import { client } from "../client/index.js";
 
 
@@ -27,9 +26,7 @@ async function makeChart(coin, days){
     let priceArr = [];
     prices.forEach(i => (priceArr.push(i[1])))
 
-   const table = new Table({
-       head: [coin]
-   })
+ 
    const sliced = priceArr.slice(-150)
    console.log(`${coin} chart last 150 datapoints`)
    console.log((await acsiichart).plot(sliced, { height: 15}))
