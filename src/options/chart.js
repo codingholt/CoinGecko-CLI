@@ -6,11 +6,21 @@ import { client } from "../client/index.js";
 
 
 async function makeChart(coin, days){
+
+    // function calcInterval(days){
+    //     const datapoints = 150
+    //     const maxDay =  datapoints % days
+    //     console.log(maxDay)
+    //     return maxDay
+
+    // }
+    
     const coingeckoREQ = await client.coinIdMarketChart({
 
         id: coin,
         vs_currency: 'usd',
         days: days,
+        // interval: calcInterval(days)
     })
     let prices = coingeckoREQ['prices']
 
@@ -20,8 +30,9 @@ async function makeChart(coin, days){
    const table = new Table({
        head: [coin]
    })
-   console.log(`${coin} chart last ${days} days`)
-   console.log((await acsiichart).plot(priceArr, { height: 40}))
+   const sliced = priceArr.slice(-150)
+   console.log(`${coin} chart last 150 datapoints`)
+   console.log((await acsiichart).plot(sliced, { height: 15}))
  
 
 }
