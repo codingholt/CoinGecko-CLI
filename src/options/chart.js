@@ -11,7 +11,6 @@ async function makeChart(coin, days){
     })
 
     const prices = coingeckoREQ['prices']
-    console.log(prices.length)
     const priceArr = [];
     prices.forEach(i => (priceArr.push(i[1])))
 
