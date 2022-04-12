@@ -1,18 +1,14 @@
 import acsiichart from 'asciichart'
 import { client } from "../client/index.js";
 import {checkDatapoints} from '../util/checkDatapoints.js'
-// import {composeNewInterval} from '../util/composeNewInterval.js'
-
 
 
 async function makeChart(coin, days){
-
     const coingeckoREQ = await client.coinIdMarketChart({
         id: coin,
         vs_currency: 'usd',
         days: days,
     })
-
 
     const prices = coingeckoREQ['prices']
     console.log(prices.length)

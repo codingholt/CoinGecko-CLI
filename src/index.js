@@ -70,7 +70,7 @@ program
 
 program
     .command('chart')
-    .description('get a chart')
+    .description('get a chart in your comamand line')
     .argument('coin', 'the coin you want to chart')
     .argument('days','number of days you want to have in your chart, default max amount of data available')
     .action(async(coin, days)=>{

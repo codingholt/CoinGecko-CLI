@@ -38,11 +38,11 @@ these two are now combined with --supply
 
 - [x] implement charts. with help of [this repo](https://github.com/kroitor/asciichart).
 
-- [x] make charts with more data points more readable. (make function for maximum ammount of data points.) 
+- [x] make charts with more data points more readable. (make function for maximum ammount of data points.)
 
 - [x] top 100, top 25 by marketcap.
 
-- [ ] use chalk for colors
+- [x] use chalk for colors (implemented it on places where something can be positive and negative)
 
 - [x] add mc rank at -mc
 
