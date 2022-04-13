@@ -13,7 +13,6 @@ async function simplePrice(coin){
         include_24hr_change: true,
         ids: coin,
     });
-    console.log(coingeckoREQ)
     checkErr(coingeckoREQ)
 
     const table = new Table({

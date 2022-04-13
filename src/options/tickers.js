@@ -19,7 +19,7 @@ async function tickers(coin){
     })
     for(let i = 0; i < coinDATA['tickers'].length; i++){
         table.push(
-            [coinDATA['tickers'][i]['base'], coinDATA['tickers'][i]['target'], coinDATA['tickers'][i]['last'], coinDATA['tickers'][i]['volume'], coinDATA['tickers'][i]['bid_ask_spread_percentage'], coinDATA['tickers'][i]['trade_url']]
+            [coingeckoREQ['tickers'][i]['base'], coingeckoREQ['tickers'][i]['target'], coingeckoREQ['tickers'][i]['last'], coingeckoREQ['tickers'][i]['volume'], coingeckoREQ['tickers'][i]['bid_ask_spread_percentage'], coingeckoREQ['tickers'][i]['trade_url']]
             );
     }
     console.log(table.toString());

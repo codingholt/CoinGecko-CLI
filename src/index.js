@@ -13,7 +13,7 @@ import { sentiment } from './options/sentiment.js';
 import { description } from './options/description.js';
 import { makeChart } from './options/chart.js'
 import { topMC } from './options/topMC.js';
-import { config } from './options/config.js'
+// import { configuration } from './options/config.js'
 
 const program = new Command();
 
@@ -28,7 +28,6 @@ program
     .argument('coin', 'id of the coin as mentioned on coingecko')
     .option('-p, --price', 'get the price of the coin and the 24h change')
     .option('-t, --tickers', 'get the tickers of a coin and some extra data')
-    .option('-o, --overview')
     .option('-fdv, --FullyDilutedValue')
     .option('-mc, --marketcap')
     .option('-mcfdv, --marketcaptofdv')
@@ -89,19 +88,19 @@ program
 
 
 
-program
-    .command('config')
-    .description('Change the default configuration for this tool')
-    .option('-curr, --currency', 'change the default currency')
-    .option('-sym, --symbol', 'change the default symbol')
-    .option('-ch, --chart_datapoints', 'change the maxium datapoints a chart can have')
-    .argument('What new value this configuration option should have', 'eg: eur, €, 150')
-    .action(async(newVal, options) =>{
-        options.currency && config('currency', newVal);
-        options.symbol && config('symbol', newVal);
-        options.chart_datapoints && config('chart_datapoints', newVal);
+// program
+//     .command('config')
+//     .description('Change the default configuration for this tool')
+//     .option('-curr, --currency', 'change the default currency')
+//     .option('-sym, --symbol', 'change the default symbol')
+//     .option('-ch, --chart_datapoints', 'change the maxium datapoints a chart can have')
+//     .argument('What new value this configuration option should have', 'eg: eur, €, 150')
+//     .action(async(newVal, options) =>{
+//         options.currency && configuration('currency', newVal);
+//         options.symbol && configuration('symbol', newVal);
+//         options.chart_datapoints && configuration('chart_datapoints', newVal);
         
-    })
+//     })
 
 
 program.parse()
