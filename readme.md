@@ -69,3 +69,14 @@ Create an [FTX](https://ftx.com/profile#a=codingholt) account using my referral 
 **ETH/ERC-20:** `0xb1dC2Cf172592bd2CdDCBD530A4a72a15b0D1ace`\
 **SOL/SPL:** `holt.sol` or `BFqpAdbRkubMVSdKu2EwSE347Rv2zWucDTbAfDLQPbDb`
 
+---
+
+## Contact
+
+[Twitter](https://twitter.com/traderholt) • [Email](mailto:codingholt@pm.me) • [Telegram](https://t.me/svenxbt)
+
+---
+
+## Licence
+
+[MIT](https://github.com/codingholt/CoinGecko-CLI/blob/main/licence.md) Ⓒ [holt.](https://github.com/codingholt/)
