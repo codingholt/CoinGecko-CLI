@@ -17,7 +17,7 @@ async function  marketcap(coin){
         head: ['Coin', 'Rank', 'Market Cap', 'Market Cap Change 24h'],
     })
 
-    table.push([coingeckoREQ['name'], coingeckoREQ['market_cap_rank'], readableNumber(coingeckoREQ['market_data']['market_cap'][default_vs_currency]) + ' default_symbol', 
+    table.push([coingeckoREQ['name'], coingeckoREQ['market_cap_rank'], readableNumber(coingeckoREQ['market_data']['market_cap'][default_vs_currency]) +  default_symbol, 
     coingeckoREQ['market_data']['market_cap_change_percentage_24h_in_currency'][default_vs_currency] > 0 ?
     chalk.green(coingeckoREQ['market_data']['market_cap_change_percentage_24h_in_currency'][default_vs_currency] + ' %') 
     : chalk.red(coingeckoREQ['market_data']['market_cap_change_percentage_24h_in_currency'][default_vs_currency] + ' %'),

@@ -13,7 +13,7 @@ async function simplePrice(coin){
         include_24hr_change: true,
         ids: coin,
     });
-
+    console.log(coingeckoREQ)
     checkErr(coingeckoREQ)
 
     const table = new Table({
@@ -21,7 +21,7 @@ async function simplePrice(coin){
     });
 
     table.push(
-    [coin, coingeckoREQ[coin][default_vs_currency],  coingeckoREQ[coin]['usd_24h_change'] > 0 ?  chalk.green(coingeckoREQ[coin]['usd_24h_change']+' %') : chalk.red(coingeckoREQ[coin]['usd_24h_change'] + ' %')]
+    [coin, coingeckoREQ[coin][default_vs_currency],  coingeckoREQ[coin][default_vs_currency+'_24h_change'] > 0 ?  chalk.green(coingeckoREQ[coin][default_vs_currency+'_24h_change']+' %') : chalk.red(coingeckoREQ[coin][default_vs_currency+'_24h_change'] + ' %')]
     );
     return console.log(table.toString());
     
