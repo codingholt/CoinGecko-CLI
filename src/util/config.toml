@@ -1,0 +1,5 @@
+# CoinGecko-CLI configuration data
+
+[vs_currency]
+default = "usd"
+default_symbol = "$"

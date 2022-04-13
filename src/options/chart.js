@@ -1,12 +1,14 @@
 import acsiichart from 'asciichart'
 import { client } from "../client/index.js";
+import {default_vs_currency} from '../util/getDefaults.js'
 import {checkDatapoints} from '../util/checkDatapoints.js'
+
 
 
 async function makeChart(coin, days){
     const coingeckoREQ = await client.coinIdMarketChart({
         id: coin,
-        vs_currency: 'usd',
+        vs_currency: default_vs_currency,
         days: days,
     })
 

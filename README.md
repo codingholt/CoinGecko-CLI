@@ -49,5 +49,8 @@ these two are now combined with --supply
 - [ ] Always include the last datapoint in the chart.
 
 - [ ] config file for preferences like which fiat currency.
+- [ ] option to change config file with a command
 
 - [ ] make nice readme
+
+- [ ] add price change @ trending coins

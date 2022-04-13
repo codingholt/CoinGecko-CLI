@@ -1,6 +1,7 @@
 import { client } from './client/index.js';
 import Table from 'cli-table3';
 import { checkErr } from './util/responseError.js';
+import {default_vs_currency, default_symbol} from './util/getDefaults.js'
 import chalk from 'chalk';
 
 
@@ -8,7 +9,7 @@ import chalk from 'chalk';
 async function simplePrice(coin){
 
     const coingeckoREQ = await client.simplePrice({
-        vs_currencies: 'usd',
+        vs_currencies: default_vs_currency,
         include_24hr_change: true,
         ids: coin,
     });
@@ -16,11 +17,11 @@ async function simplePrice(coin){
     checkErr(coingeckoREQ)
 
     const table = new Table({
-        head: ['Coin', '$', '24h change']
+        head: ['Coin', default_symbol, '24h change']
     });
 
     table.push(
-    [coin, coingeckoREQ[coin]['usd'],  coingeckoREQ[coin]['usd_24h_change'] > 0 ?  chalk.green(coingeckoREQ[coin]['usd_24h_change']+' %') : chalk.red(coingeckoREQ[coin]['usd_24h_change'] + ' %')]
+    [coin, coingeckoREQ[coin][default_vs_currency],  coingeckoREQ[coin]['usd_24h_change'] > 0 ?  chalk.green(coingeckoREQ[coin]['usd_24h_change']+' %') : chalk.red(coingeckoREQ[coin]['usd_24h_change'] + ' %')]
     );
     return console.log(table.toString());
     

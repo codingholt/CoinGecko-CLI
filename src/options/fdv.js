@@ -1,6 +1,7 @@
 import { client } from "../client/index.js";
 import { readableNumber } from "../util/readableNumbers.js";
 import  Table  from "cli-table3";
+import {default_vs_currency, default_symbol} from '../util/getDefaults.js'
 import { checkErr } from "../util/responseError.js";
 
 async function fdv(coin){
@@ -19,7 +20,7 @@ async function fdv(coin){
         head: ['coin', 'Fully Diluted Value'],
     })
 
-    table.push([coingeckoREQ['name'], readableNumber(coingeckoREQ['market_data']['fully_diluted_valuation']['usd'])+' $'])
+    table.push([coingeckoREQ['name'], readableNumber(coingeckoREQ['market_data']['fully_diluted_valuation'][default_vs_currency])+default_symbol])
 
    return console.log(table.toString());
 }
