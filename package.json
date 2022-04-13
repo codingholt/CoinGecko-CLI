@@ -1,6 +1,6 @@
 {
   "name": "coingecko-cli",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "a tool for receiving coingecko data right in your command line",
   "main": "index.js",
   "type": "module",
