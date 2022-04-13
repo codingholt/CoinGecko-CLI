@@ -23,4 +23,4 @@ If it works, the Bitcoin price and price change over the last 24 hours should ap
   
 - You can see **stats of the current supply of a coin** by running `cg INSERT_COIN_HERE -s` or by running `cg INSERT_COIN_HERE --supply`
 
-- You can see 
+- You can see **trending coins on coingecko** by typing `cg trending` in your command line.
