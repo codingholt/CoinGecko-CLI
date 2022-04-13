@@ -1,0 +1,5 @@
+vs_currency:
+  default: usd
+  default_symbol: $
+chart:
+  max_datapoints: 150

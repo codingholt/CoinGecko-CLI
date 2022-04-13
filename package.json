@@ -25,7 +25,8 @@
     "coingecko-api-v3": "^0.0.13",
     "commander": "^9.1.0",
     "fuse.js": "^6.5.3",
-    "html-to-text": "^8.1.0"
+    "html-to-text": "^8.1.0",
+    "js-yaml": "^4.1.0"
   },
   "bin": {
     "cg": "src/index.js"
