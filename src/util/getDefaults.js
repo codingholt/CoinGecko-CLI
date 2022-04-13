@@ -14,11 +14,3 @@ const chart_dataponts = data.chart.max_datapoints;
 
 //export constants
 export {default_vs_currency, default_symbol, chart_dataponts}
-
-
-//  // Saved the YAML
-// const yaml = YAML.dump(data);
-// fs.writeFileSync("./src/util/config.yaml", yaml, function (err, file) {
-//     if (err) throw err;
-//     console.log("Saved!");
-// });

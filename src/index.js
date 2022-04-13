@@ -3,7 +3,6 @@ import { Command } from 'commander';
 import { search } from './util/search.js';
 import { simplePrice } from './simplePrice.js';
 import { tickers } from './options/tickers.js';
-import { coinOverview } from './options/coinOverview.js';
 import { fdv } from './options/fdv.js';
 import { marketcap } from './options/marketcap.js';
 import { supply } from './options/supply.js';
@@ -14,6 +13,7 @@ import { sentiment } from './options/sentiment.js';
 import { description } from './options/description.js';
 import { makeChart } from './options/chart.js'
 import { topMC } from './options/topMC.js';
+import { config } from './options/config.js'
 
 const program = new Command();
 
@@ -40,7 +40,6 @@ program
     .action(async(coin, options)=>{
         options.price && simplePrice(await search(coin));
         options.tickers && tickers(await search(coin));
-        options.overview && coinOverview(await search(coin));
         options.FullyDilutedValue && fdv(await search(coin));
         options.marketcap && marketcap(await search(coin));
         options.supply && supply(await search(coin));
@@ -80,15 +79,29 @@ program
 
 
 
- program
+program
     .command('top')
     .description('get the top coins sorted by largest to smallest marketcap')
     .argument('how many coins', 'Amount of coins you want to have in your list')
     .action(async(coinCount)=>{
-        topMC(coinCount)
+       await topMC(coinCount)
     })
 
 
+
+program
+    .command('config')
+    .description('Change the default configuration for this tool')
+    .option('-curr, --currency', 'change the default currency')
+    .option('-sym, --symbol', 'change the default symbol')
+    .option('-ch, --chart_datapoints', 'change the maxium datapoints a chart can have')
+    .argument('What new value this configuration option should have', 'eg: eur, €, 150')
+    .action(async(newVal, options) =>{
+        options.currency && config('currency', newVal);
+        options.symbol && config('symbol', newVal);
+        options.chart_datapoints && config('chart_datapoints', newVal);
+        
+    })
 
 
 program.parse()
