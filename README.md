@@ -46,9 +46,9 @@ these two are now combined with --supply
 
 - [x] add mc rank at -mc
 
-- [ ] Always include the last datapoint in the chart.
+- [x] Always include the last datapoint in the chart.
 
-- [ ] config file for preferences like which fiat currency.
+- [x] config file for preferences like which fiat currency.
 - [ ] option to change config file with a command
 
 - [ ] make nice readme
