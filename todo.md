@@ -49,7 +49,7 @@ these two are now combined with --supply
 - [x] Always include the last datapoint in the chart.
 
 - [x] config file for preferences like which fiat currency.
-- [x] option to change config file with a command
+- [ ] option to change config file with a command
 
 - [ ] make nice readme
 

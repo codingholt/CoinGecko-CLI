@@ -13,7 +13,7 @@ import { sentiment } from './options/sentiment.js';
 import { description } from './options/description.js';
 import { makeChart } from './options/chart.js'
 import { topMC } from './options/topMC.js';
-// import { configuration } from './options/config.js'
+import { configuration } from './options/config.js'
 
 const program = new Command();
 
@@ -88,19 +88,19 @@ program
 
 
 
-// program
-//     .command('config')
-//     .description('Change the default configuration for this tool')
-//     .option('-curr, --currency', 'change the default currency')
-//     .option('-sym, --symbol', 'change the default symbol')
-//     .option('-ch, --chart_datapoints', 'change the maxium datapoints a chart can have')
-//     .argument('What new value this configuration option should have', 'eg: eur, €, 150')
-//     .action(async(newVal, options) =>{
-//         options.currency && configuration('currency', newVal);
-//         options.symbol && configuration('symbol', newVal);
-//         options.chart_datapoints && configuration('chart_datapoints', newVal);
+program
+    .command('config')
+    .description('Change the default configuration for this tool')
+    .option('-curr, --currency', 'change the default currency')
+    .option('-sym, --symbol', 'change the default symbol')
+    .option('-ch, --chart_datapoints', 'change the maxium datapoints a chart can have')
+    .argument('What new value this configuration option should have', 'eg: eur, €, 150')
+    .action(async(newVal, options) =>{
+        options.currency && configuration('currency', newVal);
+        options.symbol && configuration('symbol', newVal);
+        options.chart_datapoints && configuration('chart_datapoints', newVal);
         
-//     })
+    })
 
 
 program.parse()
