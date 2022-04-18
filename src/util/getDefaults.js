@@ -1,12 +1,9 @@
-import fs from 'fs';
-
-const { config } = JSON.parse(fs.readFileSync('./config.json'));
+import { config } from './config.js'
 
 //set constants from config
-const default_vs_currency = config['vs_currency']['default']
-console.log(default_vs_currency)
-const default_symbol = config['vs_currency']['default_symbol']
-const chart_dataponts = config['chart']['max_datapoints']
+const default_vs_currency = config.vs_currency.default_currency
+const default_symbol = config.vs_currency.symbol
+const chart_dataponts = config.chart.max_datapoints
 
 
 //export constants
