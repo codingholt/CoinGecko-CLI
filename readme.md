@@ -47,6 +47,10 @@ If it works, the Bitcoin price and price change over the last 24 hours should ap
   
   for example by typing `cg top 50` you get the top 50 coins by market cap.
 
+## Edit Default settings
+
+- Go into the node_modules folder where you installed the cli. and edit the `coingecko-cli/scr/util/config.js` file to your preffered defaults.
+
 ---
 
 ## Support the project
