@@ -35,7 +35,6 @@ program
     .option('-dev, --developerdata')
     .option('-st, --sentiment')
     .option('-ds, --description')
-    .option('-c, --chart')
     .action(async(coin, options)=>{
         options.price && simplePrice(await search(coin));
         options.tickers && tickers(await search(coin));
