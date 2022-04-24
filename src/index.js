@@ -13,7 +13,7 @@ import { sentiment } from './options/sentiment.js';
 import { description } from './options/description.js';
 import { makeChart } from './options/chart.js'
 import { topMC } from './options/topMC.js';
-// import { configuration } from './options/config.js'
+import { makeChartMC } from './options/chartMC.js'
 
 const program = new Command();
 
@@ -70,8 +70,12 @@ program
     .description('get a chart in your comamand line')
     .argument('coin', 'the coin you want to chart')
     .argument('days','number of days you want to have in your chart, default max amount of data available')
-    .action(async(coin, days)=>{
+    .option('-mc', 'display marketcap chart')
+    .action(async(coin, days, mc)=>{
+        if(!mc){
         makeChart(await search(coin), days)
+        }makeChartMC(await search(coin), days)
+
     })
 
 
