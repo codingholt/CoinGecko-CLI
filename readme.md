@@ -83,4 +83,4 @@ Create an [FTX](https://ftx.com/profile#a=codingholt) account using my referral 
 
 ## Licence
 
-[MIT](https://github.com/codingholt/CoinGecko-CLI/blob/main/licence.md) Ⓒ [holt.](https://github.com/codingholt/)# coingecko-cli-website
+[MIT](https://github.com/codingholt/CoinGecko-CLI/blob/main/licence.md) Ⓒ [holt.](https://github.com/codingholt/) [CoinGecko-CLI](https://coingecko-cli.vercel.app/)
