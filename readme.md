@@ -39,6 +39,10 @@ If it works, the Bitcoin price and price change over the last 24 hours should ap
 
     for example by typing `cg chart eth 10` you get an ethereum chart displayed going back 10 days
 
+- You can **see a chart of the market cap coin in your command line** by typing `cg chart INSERT_COIN_HERE INSERT_AMOUNT_OF_DAYS_BACK_HERE -mc`
+
+    for example by typing `cg chart eth 10 -mc` you get an ethereum market cap chart displayed going back 10 days
+
 - You can see the **sentiment of a certain coin** by typing `cg INSERT_COIN_HERE --sentiment`
 
 - You can see **tickers of a coin and where you can trade** it by typing `cg INSERT_COIN_HERE -t` or `--tickers`
