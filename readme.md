@@ -67,10 +67,6 @@ Please feel free to [create a GitHub issue](https://github.com/codingholt/CoinGe
 
 Share the project with your friends and followers (here's a free [tweet](https://twitter.com/intent/tweet?text=https%3A%2F%2Fgithub.com%2Fcodingholt%2FCoinGecko-CLI%0AIm%20using%20this%20cool%20tool%20to%20get%20all%20sorts%20of%20data%20about%20cryptocurrency%20in%20my%20command%20line%21%F0%9F%92%BB%0D%0Acheck%20it%20out%20here%0D%0A)!).
 
-### Referral
-
-Create an [FTX](https://ftx.com/profile#a=codingholt) account using my referral link, you get 5% discount on fee's too!
-
 ### Donate
 
 **BTC:** `1FNEzH6zJaMF3DT7jYzNTgisWdoC714uaF`\
@@ -81,7 +77,7 @@ Create an [FTX](https://ftx.com/profile#a=codingholt) account using my referral 
 
 ## Contact
 
-[Twitter](https://twitter.com/traderholt) • [Email](mailto:codingholt@pm.me) • [Telegram](https://t.me/svenxbt)
+[Twitter](https://twitter.com/traderholt) • [Email](mailto:codingholt@gmx.com) • [Telegram](https://t.me/svenxbt)
 
 ---
 
