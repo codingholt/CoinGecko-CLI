@@ -16,9 +16,8 @@ a tool for receiving coingecko data right in your command line
 
 - [x] flag for marketcap to fdv ratio.
 
-these two are now combined with --supply
-
 - [x] flag for total supply.
+
 - [x] flag for circulating supply. 
 
 - [x] coingecko trending coins.
@@ -48,11 +47,11 @@ these two are now combined with --supply
 - [x] Always include the last datapoint in the chart.
 
 - [x] config file for preferences like which fiat currency.
-- 
+
 - [x] Coin Overview.
 
 - [ ] Improve search, (maybe use the search endpoint for that, but idk how fast it is?)
-- 
+
 - [ ] add price change @ trending coins
 
 - [ ] option to change config file with a command
