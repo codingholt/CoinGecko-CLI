@@ -3,18 +3,18 @@ import { Command } from 'commander';
 import{ tickers,
     fdv,
     marketcap,
-    supply ,
-    dev ,
-    marketcaptofdv ,
-    trending ,
-    trending ,
+    supply,
+    dev,
+    marketcaptofdv,
+    trending,
     sentiment,
     description,
     makeChart,
     topMC,
     makeChartMC,
     search,
-    coinoverview
+    coinoverview,
+    simplePrice
 } from './imports.js'
 const program = new Command();
 
@@ -22,7 +22,8 @@ const program = new Command();
 program
     .name('CoinGecko CLI')
     .description('CLI for reciving coingecko data right in your terminal 💻')
-    .version('0.0.1');
+    .version('0.1.5');
+
 
 program
     .description('get coin data, use id as listed on coingecko (most likely the full name)')
@@ -46,7 +47,9 @@ program
         options.marketcaptofdv && marketcaptofdv(await search(coin));
         options.sentiment && sentiment(await search(coin));
         options.description && description(await search(coin));
-
+        if(Object.keys(options).length === 0 ){
+            coinoverview(coin) 
+        }
 })
 
 

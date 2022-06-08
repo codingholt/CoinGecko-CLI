@@ -12,6 +12,7 @@ import { topMC } from './options/topMC.js';
 import { makeChartMC } from './options/chartMC.js'
 import { search } from './util/search.js';
 import { coinoverview } from './options/coinoverview.js';
+import { simplePrice } from './options/simplePrice.js'
 export {
     tickers,
     fdv,
@@ -20,12 +21,12 @@ export {
     dev ,
     marketcaptofdv ,
     trending ,
-    trending ,
     sentiment,
     description,
     makeChart,
     topMC,
     makeChartMC,
     search,
-    coinoverview
+    coinoverview,
+    simplePrice
 }
