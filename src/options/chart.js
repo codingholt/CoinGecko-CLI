@@ -5,7 +5,7 @@ import {checkDatapoints} from '../util/checkDatapoints.js'
 
 
 
-async function makeChart(coin, days){
+async function makeChart(coin, days, height=15, displayName=true){
     const coingeckoREQ = await client.coinIdMarketChart({
         id: coin,
         vs_currency: default_vs_currency,
@@ -18,8 +18,8 @@ async function makeChart(coin, days){
 
     const Arr = await checkDatapoints(priceArr)
 
-    console.log(`${coin} chart last ${days} days`)
-    console.log((await acsiichart).plot(Arr, { height: 15}))
+    console.log(displayName ? `${coin} chart last ${days} days` : `Chart last ${days} days`)
+    console.log((await acsiichart).plot(Arr, { height: height}))
  
 
 }

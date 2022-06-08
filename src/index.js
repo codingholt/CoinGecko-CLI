@@ -48,7 +48,7 @@ program
         options.sentiment && sentiment(await search(coin));
         options.description && description(await search(coin));
         if(Object.keys(options).length === 0 ){
-            coinoverview(coin) 
+            coinoverview(await search(coin)) 
         }
 })
 
