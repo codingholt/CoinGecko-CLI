@@ -18,9 +18,8 @@ a tool for receiving coingecko data right in your command line
 
 these two are now combined with --supply
 
-     - [x] flag for total supply.
-
-     - [x] flag for circulating supply. 
+- [x] flag for total supply.
+- [x] flag for circulating supply. 
 
 - [x] coingecko trending coins.
 
