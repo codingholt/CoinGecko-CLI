@@ -65,7 +65,7 @@ Please feel free to [create a GitHub issue](https://github.com/codingholt/CoinGe
 
 ### Share
 
-Share the project with your friends and followers (here's a free [tweet](https://twitter.com/intent/tweet?text=https%3A%2F%2Fgithub.com%2Fcodingholt%2FCoinGecko-CLI%0AIm%20using%20this%20cool%20tool%20to%20get%20all%20sorts%20of%20data%20about%20cryptocurrency%20in%20my%20command%20line%21%F0%9F%92%BB%0D%0Acheck%20it%20out%20here%0D%0A)!).
+[Share the project with your friends and followers.](https://twitter.com/intent/tweet?text=https%3A%2F%2Fgithub.com%2Fcodingholt%2FCoinGecko-CLI%0AIm%20using%20this%20cool%20tool%20to%20get%20all%20sorts%20of%20data%20about%20cryptocurrency%20in%20my%20command%20line%21%F0%9F%92%BB%0D%0Acheck%20it%20out%20here%0D%0A)
 
 ### Donate
 
