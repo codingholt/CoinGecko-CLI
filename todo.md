@@ -50,7 +50,7 @@ a tool for receiving coingecko data right in your command line
 
 - [x] Coin Overview.
 
-- [ ] Improve search, (maybe use the search endpoint for that, but idk how fast it is?)
+- [x] Improve search, (maybe use the search endpoint for that, but idk how fast it is?)
 
 - [ ] add price change @ trending coins
 
