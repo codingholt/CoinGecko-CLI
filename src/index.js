@@ -37,6 +37,7 @@ program
     .option('-dev, --developerdata')
     .option('-st, --sentiment')
     .option('-ds, --description')
+    .option('-src, --search')
     .action(async(coin, options)=>{
         options.price && simplePrice(await search(coin));
         options.tickers && tickers(await search(coin));
@@ -47,6 +48,7 @@ program
         options.marketcaptofdv && marketcaptofdv(await search(coin));
         options.sentiment && sentiment(await search(coin));
         options.description && description(await search(coin));
+        options.search && newSearch(coin)
         if(Object.keys(options).length === 0 ){
             coinoverview(await search(coin)) 
         }

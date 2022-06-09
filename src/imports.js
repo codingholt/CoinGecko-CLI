@@ -10,9 +10,10 @@ import { description } from './options/description.js';
 import { makeChart } from './options/chart.js'
 import { topMC } from './options/topMC.js';
 import { makeChartMC } from './options/chartMC.js'
-import { search } from './util/search.js';
+import { legacy_search } from './util/oldsearch.js';
 import { coinoverview } from './options/coinoverview.js';
 import { simplePrice } from './options/simplePrice.js'
+import { search } from './util/search.js'
 export {
     tickers,
     fdv,
@@ -27,6 +28,7 @@ export {
     topMC,
     makeChartMC,
     search,
+    legacy_search,
     coinoverview,
     simplePrice
 }

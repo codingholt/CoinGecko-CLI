@@ -1,23 +1,10 @@
-import Fuse from 'fuse.js'
-
-import { coins } from './coins.js'
-
+import Axios from 'axios'
 async function search(coin){
-  const options = {
-    includeScore: true,
-    // Search in `name` and in `symbol` array
-    keys: ['id','name', 'symbol']
-  }
+    const req = await Axios.get(`https://api.coingecko.com/api/v3/search?query=${coin}`, {method: 'GET',})
 
-  const fuse = new Fuse(coins, options)
 
-  const result = fuse.search(coin)
-  
-  coin = result[0]['item']['id']
-
-  return coin
-
+    return req['data']['coins'][0]['id']
 }
 
-export {search}
 
+export{search}
