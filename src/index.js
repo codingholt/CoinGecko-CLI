@@ -22,7 +22,7 @@ const program = new Command();
 program
     .name('CoinGecko CLI')
     .description('CLI for reciving coingecko data right in your terminal 💻')
-    .version('0.1.5');
+    .version('1.6.0');
 
 
 program
