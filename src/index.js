@@ -26,7 +26,7 @@ program
 
 
 program
-    .description('get coin data, use id as listed on coingecko (most likely the full name)')
+    // .description('get coin data, use id as listed on coingecko (most likely the full name)')
     .argument('coin', 'id of the coin as mentioned on coingecko')
     .option('-p, --price', 'get the price of the coin and the 24h change')
     .option('-t, --tickers', 'get the tickers of a coin and some extra data')
