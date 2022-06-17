@@ -71,7 +71,7 @@ Please feel free to [create a GitHub issue](https://github.com/codingholt/CoinGe
 
 ### Donate
 
-**BTC:** `1FNEzH6zJaMF3DT7jYzNTgisWdoC714uaF`\
+**BTC:** `bc1q5jrx8aw5c4wq76rl0etxfhvv69gtnj7v3ldstc`\
 **ETH/ERC-20:** `0xb1dC2Cf172592bd2CdDCBD530A4a72a15b0D1ace`\
 **SOL/SPL:** `holt.sol` or `BFqpAdbRkubMVSdKu2EwSE347Rv2zWucDTbAfDLQPbDb`
 
