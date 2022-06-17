@@ -21,31 +21,33 @@ If it works, the Bitcoin price and price change over the last 24 hours should ap
 
 ## Features
 
-- You can see the **current price of a coin** by running `cg INSERT_COIN_HERE -p` or  `--price` or by running `cg price INSERT_COIN_HERE`
+- Display an overview of an coin by typing `cg COIN_NAME` 
+
+- You can see the **current price of a coin** by running `cg COIN_NAME -p` or  `--price` or by running `cg price COIN_NAME`
   
-- You can see the **marketcap of a coin** by running `cg INSERT_COIN_HERE -mc` or `--marketcap`
+- You can see the **marketcap of a coin** by running `cg COIN_NAME -mc` or `--marketcap`
   
-- You can see **stats of the current supply of a coin** by running `cg INSERT_COIN_HERE -s` or `--supply`
+- You can see **stats of the current supply of a coin** by running `cg COIN_NAME -s` or `--supply`
 
 - You can see **trending coins on coingecko** by typing `cg trending` in your command line.
 
-- You can see **a description of the coin** by typing `cg INSERT_COIN_HERE -ds` or `--description`
+- You can see **a description of the coin** by typing `cg COIN_NAME -ds` or `--description`
 
-- You can see stats about the developers of a certain project by typing `cg INSERT_COIN_HERE -dev`
+- You can see stats about the developers of a certain project by typing `cg COIN_NAME -dev`
 
-- You can see the Fully diluted valuation of a coin by typing `cg INSERT_COIN_HERE -fdv`
+- You can see the Fully diluted valuation of a coin by typing `cg COIN_NAME -fdv`
 
-- You can **see a chart of a coin in your command line** by typing `cg chart INSERT_COIN_HERE INSERT_AMOUNT_OF_DAYS_BACK_HERE`
+- You can **see a chart of a coin in your command line** by typing `cg chart COIN_NAME INSERT_AMOUNT_OF_DAYS_BACK_HERE`
 
     for example by typing `cg chart eth 10` you get an ethereum chart displayed going back 10 days
 
-- You can **see a chart of the market cap coin in your command line** by typing `cg chart INSERT_COIN_HERE INSERT_AMOUNT_OF_DAYS_BACK_HERE -mc`
+- You can **see a chart of the market cap coin in your command line** by typing `cg chart COIN_NAME INSERT_AMOUNT_OF_DAYS_BACK_HERE -mc`
 
     for example by typing `cg chart eth 10 -mc` you get an ethereum market cap chart displayed going back 10 days
 
-- You can see the **sentiment of a certain coin** by typing `cg INSERT_COIN_HERE --sentiment`
+- You can see the **sentiment of a certain coin** by typing `cg COIN_NAME --sentiment`
 
-- You can see **tickers of a coin and where you can trade** it by typing `cg INSERT_COIN_HERE -t` or `--tickers`
+- You can see **tickers of a coin and where you can trade** it by typing `cg COIN_NAME -t` or `--tickers`
   
 - You can **see the top coins sorted by descending market cap** (biggest market cap fist) `cg top NUMBER`
   
